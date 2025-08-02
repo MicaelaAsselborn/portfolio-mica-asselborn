@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --altura-header: 80px;
+    --negro: #181818;
+    --soft-negro: #333;
+    --soft-rosa: pink;
+    --rosa: rgb(255, 159, 175);
+    --fucsia: rgb(255, 98, 124);
+    --blanco: rgb(255, 244, 250);
+}
