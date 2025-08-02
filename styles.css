@@ -3,25 +3,29 @@
     padding: 0;
     box-sizing: border-box;
     /* outline: 2px solid red; */
-    text-align: center;
+    font-family: "Roboto flex", "Poiret One", Mulish, serif;
 }
 :root{
     --altura-header: 80px;
     --negro: #181818;
-    --soft-negro: #333;
+    --soft-negro: #272727;
     --soft-rosa: pink;
     --rosa: rgb(255, 159, 175);
     --fucsia: rgb(255, 98, 124);
+    --rosa-chillon: rgb(255, 55, 88);
     --blanco: rgb(255, 244, 250);
 }
 body{
     background-color: var(--soft-negro);
     color: var(--blanco);
 }
+p{
+    font-size: 1.2em;
+}
 header{
     height: var(--altura-header);
     background-color: var(--negro);
-    color: var(--pink);
+    color: var(--soft-rosa);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +36,9 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+h1{
+    font-size: 1.7em;
 }
 
 /* MENU HAMBURGUESA */
@@ -63,12 +70,16 @@ nav{
     height: 0;
     overflow: hidden;
     transition: all 0.5s ease;
+    z-index: 1;
 }
 @media (min-width: 768px) {
     header{
         flex-direction: column;
         gap: 0.8em;
         height: auto;
+    }
+    h1{
+        font-size: 2.5em;
     }
     .icono-hamburguesa{
         display: none;
@@ -89,6 +100,20 @@ nav{
         flex-direction: row;
     }
 }
+@media (min-width: 1440px) {
+    li{
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 2560px){
+    h1{
+        font-size: 5em;
+    }
+    li{
+        font-size: 2.5em;
+    }
+}
+
 /* FIN MENU HAMBURGUESA */
 
 li{
@@ -104,7 +129,7 @@ a:hover{
 
 /* ANIMACIÓN UNDERLINE */
 
-.underline{
+.underline, .blinking{
     display: inline-block;
     position: relative;
 }
@@ -125,10 +150,86 @@ a:hover{
 
 /* FIN ANIMACIÓN UNDERLINE */
 
+/* ANIMACIÓN BLINKING */
+.blinking{
+    transition: all 0.1s ease-in-out ;
+}
+.blinking::after{
+    content: "";
+    position: absolute;
+    margin-left: 5px;
+    width: 1px;
+    height: 100%;
+    background-color: var(--rosa);
+    animation: blinking 2s linear infinite;
+}
+@keyframes blinking{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+main{
+    padding: 2em;
+}
+
 /* HERO SECTION */
 
 .hero{
-
+height: calc(100vh - var(--altura-header));
+height: calc(100dvh - var(--altura-header));
+color: var(--soft-rosa);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1em;
+text-align: center;
+}
+h2{
+    color: var(--rosa-chillon);
+    font-size: 3.5em;
+}
+.texto-secundario{
+    color: var(--fucsia);
+    font-size: 2.5em;
+}
+@media (min-width: 768px){
+    p{
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 1024px){
+    .hero{
+        align-items: flex-start;
+        margin: 0 7em;
+        text-align: justify;
+    }
+    h2{
+        font-size: 4em;
+    }
+    .texto-secundario
+    p{
+        font-size: 2em;
+    }
+}
+@media (min-width: 2560px){
+    .hero{
+        align-items: flex-start;
+        margin: 0 30em;
+    }
+    p{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 10em;
+    }
+    .texto-secundario{
+        font-size: 7em;
+    }
 }
 
 /* FOOTER */
