@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de Micaela Asselborn</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -15,8 +15,19 @@
   </head>
   <body>
     <header>
+      <h2>Micaela Asselborn</h2>
       <nav>
-        <h2>Micaela Asselborn</h2>
+        <input type="checkbox" id="menu-hamburguesa" class="menu-hamburguesa" />
+        <label for="menu-hamburguesa" class="icono-hamburguesa">
+          <i
+            class="fa-solid fa-bars fa-2xl icono-abrir"
+            style="color: #ff9faf"
+          ></i>
+          <i
+            class="fa-solid fa-xmark fa-2xl icono-cerrar"
+            style="color: #ff9faf"
+          ></i>
+        </label>
         <ul class="navbar">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre-mi">Sobre mi</a></li>
@@ -26,15 +37,21 @@
         </ul>
       </nav>
     </header>
-    <section id="inicio" class="hero"></section>
-    <section id="sobre-mi"></section>
-    <section id="proyectos"></section>
-    <section id="certificados"></section>
-    <section id="contacto"></section>
+    <main>
+      <section id="inicio" class="hero"></section>
+      <section id="sobre-mi"></section>
+      <section id="proyectos"></section>
+      <section id="certificados"></section>
+      <section id="contacto"></section>
+    </main>
     <footer>
       <p>2025</p>
-      <p>Micaela Asselborn</p>
-      <p>Proyecto evaluado para Desarrollo Web Fulstack - UTN</p>
+      <p>
+        <a href="https://www.instagram.com/mica_asselborn/?hl=es-la"
+          >Micaela Asselborn</a
+        >
+      </p>
+      <p>Proyecto evaluado para Desarrollo Web Fullstack - UTN</p>
     </footer>
   </body>
 </html>

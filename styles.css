@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 2px solid red; */
+    text-align: center;
 }
 :root{
     --altura-header: 80px;
@@ -11,4 +13,95 @@
     --rosa: rgb(255, 159, 175);
     --fucsia: rgb(255, 98, 124);
     --blanco: rgb(255, 244, 250);
+}
+body{
+    background-color: var(--soft-negro);
+    color: var(--blanco);
+}
+header{
+    height: var(--altura-header);
+    background-color: var(--negro);
+    color: var(--pink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0.8em;
+    border-bottom: 1.5px solid pink;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MENU HAMBURGUESA */
+
+.menu-hamburguesa, .icono-hamburguesa .icono-cerrar{
+    display: none; 
+}
+.menu-hamburguesa:checked ~ .navbar{
+    height: calc(100% - var(--altura-header));
+}
+.menu-hamburguesa:checked + .icono-hamburguesa .icono-abrir{
+    display: none;
+}
+.menu-hamburguesa:checked + .icono-hamburguesa .icono-cerrar{
+    display: inline;
+}
+.navbar{
+    background-color: var(--negro);
+    width: 100%;
+    position: absolute;
+    top: var(--altura-header);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 
+    3em;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+@media (min-width: 768px) {
+    header{
+        flex-direction: column;
+        gap: 0.8em;
+        height: auto;
+    }
+    .icono-hamburguesa{
+        display: none;
+    }
+    .navbar{
+        position: static;
+        width: auto;
+        flex-direction: row;
+        font-size: 1.5rem;
+        height: var(--altura-header);
+        background-color: transparent;
+        gap: 1em;
+        height: auto;
+    }
+}
+@media (min-width: 1024px) {
+    header{
+        flex-direction: row;
+    }
+}
+/* FIN MENU HAMBURGUESA */
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--fucsia);
+}
+
+/* FOOTER */
+
+footer{
+    padding: 1em 2em;
+    background-color: var(--negro);
 }
