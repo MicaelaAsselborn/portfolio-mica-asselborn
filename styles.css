@@ -24,7 +24,7 @@ p{
     font-size: 1.2em;
 }
 header{
-    height: var(--altura-header);
+    min-height: var(--altura-header);
     background-color: var(--negro);
     color: var(--soft-rosa);
     display: flex;
@@ -32,6 +32,9 @@ header{
     align-items: center;
     padding: 1em 0.8em;
     border-bottom: 1.5px solid pink;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
 }
 nav{
     display: flex;
@@ -59,7 +62,7 @@ h1{
 .navbar{
     background-color: var(--negro);
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: var(--altura-header);
     left: 0;
     display: flex;
@@ -177,8 +180,8 @@ a:hover{
 /* SECCIÓN INICIO */
 
 .hero{
-height: calc(100vh - var(--altura-header));
-height: calc(100dvh - var(--altura-header));
+height: 100vh;
+height: 100dvh;
 color: var(--soft-rosa);
 display: flex;
 flex-direction: column;
@@ -187,6 +190,7 @@ align-items: center;
 gap: 1em;
 text-align: center;
 padding: 0 2em;
+padding-top: var(--altura-header);
 }
 h2{
     color: var(--rosa-chillon);
