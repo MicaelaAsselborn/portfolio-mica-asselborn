@@ -45,7 +45,7 @@ h1{
 /* MENU HAMBURGUESA */
 
 .menu-hamburguesa, .icono-hamburguesa .icono-cerrar{
-    display: none; 
+    display: none;
 }
 .menu-hamburguesa:checked ~ .navbar{
     height: calc(100% - var(--altura-header));
@@ -66,7 +66,7 @@ h1{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 
+    font-size:
     3em;
     height: 0;
     overflow: hidden;
@@ -255,7 +255,7 @@ h3{
     gap: 20px;
 }
 .foto-cv{
-    width: 80%;
+    width: 100%;
     border-radius: 15px;
 }
 .sobre-mi-texto{
@@ -288,6 +288,7 @@ h3{
     }
     .foto-cv{
         max-width: 400px;
+        z-index: 2;
     }
     h3{
         font-size: 5em;
@@ -308,6 +309,58 @@ h3{
     }
 }
 
+/* ANIMACIÓN BORDE FOTO */
+
+.recuadro-foto-cv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    z-index: 0;
+    margin: auto;
+}
+@media (min-width: 1440px){
+    .recuadro-foto-cv{
+        max-width: 400px;
+    }
+}
+@media (min-width: 2560px){
+    .recuadro-foto-cv{
+        max-width: 600px;
+    }
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.recuadro-foto-cv::after, .recuadro-foto-cv::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 20%, var(--rosa-chillon));
+    padding: 5px;
+    border-radius: 15px;
+    z-index: -1;
+    animation: spin 3s linear infinite;
+}
+.recuadro-foto-cv::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
 /* FOOTER */
 
 footer{
@@ -317,3 +370,7 @@ footer{
     font-size: 0.8em;
     border-top: 1.5px solid pink;
 }
+
+    
+    
+    
