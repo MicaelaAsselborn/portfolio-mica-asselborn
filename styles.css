@@ -47,8 +47,18 @@ h1{
 }
 section{
     min-height: 100dvh;
+    padding: 10%;
 }
-
+@media (min-width: 1440px){
+    section{
+        padding: 15%;
+    }
+}
+@media (min-width){
+    section{
+        padding: 20%;
+    }
+}
 /* MENU HAMBURGUESA */
 
 .menu-hamburguesa, .icono-hamburguesa .icono-cerrar{
@@ -107,6 +117,9 @@ section{
     header{
         flex-direction: row;
     }
+    .hero{
+        padding: 20%;
+    }
 }
 @media (min-width: 1440px) {
     li{
@@ -119,6 +132,12 @@ section{
     }
     li{
         font-size: 2.5em;
+    }
+    header{
+        padding: 20px 2%;
+    }
+    .navbar{
+        gap: 2em;
     }
 }
 
@@ -134,7 +153,6 @@ a{
 a:hover{
     color: var(--rosa);
 }
-
 /* ANIMACIÓN UNDERLINE */
 
 .underline, .blinking{
@@ -191,8 +209,6 @@ justify-content: center;
 align-items: center;
 gap: 1em;
 text-align: center;
-padding: 0 2em;
-padding-top: var(--altura-header);
 }
 h2{
     color: var(--rosa-chillon);
@@ -210,7 +226,6 @@ h2{
 @media (min-width: 1024px){
     .hero{
         align-items: flex-start;
-        margin: 0 7em;
         text-align: justify;
     }
     h2{
@@ -224,7 +239,6 @@ h2{
 @media (min-width: 2560px){
     .hero{
         align-items: flex-start;
-        margin: 0 30em;
     }
     p{
         font-size: 3em;
@@ -246,7 +260,6 @@ h2{
     justify-content: center;
     align-items: center;
     gap: 50px;
-    padding: 30% 1.5em;
     text-align: center;
     background-color: var(--negro);
 }
@@ -283,8 +296,8 @@ h3{
 @media (min-width: 1024px){
     #sobre-mi{
         flex-direction: row;
-        padding: 20% 5em;
         align-items: center;
+        gap: 0;
     }
     .sobre-mi-visual{
         display: flex;
@@ -299,9 +312,6 @@ h3{
     }
 }
 @media(min-width: 2560px){
-    #sobre-mi{
-        padding: 20% 10em;
-    }
     .sobre-mi-visual{
         gap: 200px;
     }
@@ -370,13 +380,14 @@ h3{
 
 #proyectos{
     background-color: var(--soft-negro);
+    padding: 10%;
 }
 #proyectos h3{
     color: var(--fucsia);
 }
 #proyectos img{
-    width: fit-content;
-    height: 256px;
+    width: 100%;
+    height: auto;
 }
 h4{
     font-size: 1.5em;
@@ -391,8 +402,8 @@ h4:hover{
 }
 .wrapper{
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 250px;
     gap: 20PX;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -402,48 +413,95 @@ h4:hover{
 }
 .card{
     scroll-snap-align: center;
-    width: fit-content;
-    height: 300px;
+    width: 100%;
+    height: 200px;
     flex-shrink: 0;
+}
+.flecha{
+    font-size: 3em;
+    padding-bottom: 0.5em;
+}
+.espacio{
+    display: inline-block;
+    width: 2em;
 }
 @media (min-width:768px){
     .wrapper{
-    width: 90%;
-    height: 500px;
-}
-    .card, #proyectos img{
-        width: 100%;
-        height: 500px
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    padding: 6% 0;
+    flex-wrap: wrap;
+    overflow: hidden;
     }
-    #proyectos img{
-        height: 500px;
+    .card{
+        width: 40%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .card:hover{
+        transform: rotate(3deg) scale(1.3);
+        transition: all 0.4s ease;
+        z-index: 1;
+        border: 3px solid var(--fucsia);
+    }
+    .flechas-container{
+        display: none;
     }
 }
 @media (min-width:1024px){
     #proyectos{
         display: flex;
         flex-direction: row-reverse;
-        padding: 20% 5em;
+        gap: 0;
     }
     .titulo-seccion{
-        flex-shrink: 2;
+        flex-grow: 1;
     }
     .wrapper{
-        width: 500px;
+        width: 65%;
+        flex-grow: 2;
     }
-}
-@media (min-width:1440px){
-    #proyectos img, .card{
-        width: min(100%, 500px);
+    .card{
+        width: 40%;
+        height: 180px;
+        overflow: hidden;
     }
-    .wrapper{
-        width: 70%;
+    #proyectos img{
+        height:fit-content;
     }
 }
 @media (min-width:1440px){
     #proyectos{
-        padding: 0 10em
-    };
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0;
+    }
+    .titulo-seccion{
+        flex-grow: 1;
+    }
+    .wrapper{
+        width: 80%;
+        gap: 30px;
+    }
+    .card{
+        width: 25%;
+        height: 200px;
+    }
+    h4{
+        padding: 10px;
+    }
+}
+@media (min-width:2560px){
+    .card{
+        width: 25%;
+        height: 300px;
+    }
+    h4{
+        font-size: 2em;
+        padding: 20px;
+    }
 }
 
 /* SECCIÓN CERTIFICADOS */
@@ -463,7 +521,3 @@ footer{
     font-size: 0.8em;
     border-top: 1.5px solid pink;
 }
-
-    
-    
-    
