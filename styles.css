@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     /* outline: 2px solid red; */
-    font-family: "Roboto flex", "Poiret One", Mulish, serif;
+    font-family: "Delius Swash Caps" ,"Roboto flex", "Poiret One", Mulish, serif;
     scroll-behavior: smooth;
 }
 :root{
@@ -22,6 +22,7 @@ body{
 }
 p{
     font-size: 1.2em;
+    font-family: "Edu NSW ACT Hand Pre";
 }
 header{
     min-height: var(--altura-header);
@@ -118,24 +119,27 @@ section:not(:first-of-type){
     .hero{
         padding: 20%;
     }
+    .navbar{
+        font-size: 1.3em;
+        gap: 0.6em;
+    }
 }
 @media (min-width: 1440px) {
-    li{
-        font-size: 1.5em;
+    .navbar{
+        font-size: 1.8em;
+        gap: 0.8em;
     }
 }
 @media (min-width: 2560px){
     h1{
         font-size: 5em;
     }
-    li{
-        font-size: 2.5em;
+    .navbar{
+        font-size: 3em;
+        gap: 1em;
     }
     header{
         padding: 20px 2%;
-    }
-    .navbar{
-        gap: 2em;
     }
 }
 
@@ -218,7 +222,7 @@ h2{
 }
 @media (min-width: 768px){
     p{
-        font-size: 1.5em;
+        font-size: 2em;
     }
 }
 @media (min-width: 1024px){
@@ -231,7 +235,7 @@ h2{
     }
     .texto-secundario
     p{
-        font-size: 2em;
+        font-size: 3em;
     }
 }
 @media (min-width: 2560px){
@@ -239,7 +243,7 @@ h2{
         align-items: flex-start;
     }
     p{
-        font-size: 3em;
+        font-size: 3.5em;
     }
     h2{
         font-size: 10em;
@@ -280,6 +284,7 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    font-size: 0.9em;
 }
 @media (min-width: 768px){
     .sobre-mi-visual{
@@ -289,15 +294,23 @@ h3{
     }
     h3{
     font-size: 4em;
-}
+    }
+    .sobre-mi-texto{
+        font-size: 0.8em;
+    }
 }
 @media (min-width: 1024px){
     #sobre-mi{
         flex-direction: row;
         align-items: center;
-        gap: 0;
+        gap: 10px;
+    }
+    .sobre-mi-texto{
+        font-size: 0.6em;
+        width: 60%;
     }
     .sobre-mi-visual{
+        width: 40%;
         display: flex;
         flex-direction: column;
     }
@@ -309,7 +322,15 @@ h3{
         font-size: 5em;
     }
 }
+@media(min-width: 1440px){
+    .sobre-mi-texto{
+        font-size: 0.7em;
+    }
+}
 @media(min-width: 2560px){
+    .sobre-mi-texto{
+        font-size: 0.6em;
+    }
     .sobre-mi-visual{
         gap: 200px;
     }
@@ -398,6 +419,19 @@ h3{
 }
 .contenedor-lenguajes i:hover{
     transform: scale(1.5);
+}
+@media(min-width:768px){
+    .contenedor-lenguajes{
+        justify-content: center;
+    }
+    .contenedor-lenguajes{
+        font-size: 8em;
+    }
+}
+@media(min-width:2560px){
+    .contenedor-lenguajes{
+        font-size: 15em;
+    }
 }
 
 /* PROYECTOS */
@@ -534,6 +568,9 @@ h4:hover{
     background-color: var(--soft-negro);
     text-align: center;
 }
+#certificados h3{
+    color: var(--fucsia);
+}
 
 /* SECCIÓN CONTACTO */
 
@@ -563,7 +600,15 @@ h4:hover{
 @media(min-width:768px){
     .contenedor-redes i{
     font-size: 5em;
+    }
 }
+@media(min-width:2560px){
+    #contacto h2{
+        font-size: 5em;
+    }
+    .contenedor-redes i{
+    font-size: 10em;
+    }
 }
 
 /* FOOTER */
