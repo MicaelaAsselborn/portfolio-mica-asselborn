@@ -404,8 +404,10 @@ h3{
     flex-direction: column;
     justify-content: center;
 }
-#lenguajes h2{
+#lenguajes h3{
     color: var(--fucsia);
+    display: inline-block;
+    margin: 0 auto;
 }
 .contenedor-lenguajes{
     display: flex;
@@ -448,7 +450,7 @@ h4{
     font-size: 1.5em;
     width: 100%;
     padding: 8px 0;
-    background-color: var(--negro);
+    background-color: var(--soft-negro);
     color: var(--rosa);
     margin: auto;
 }
@@ -567,9 +569,15 @@ h4:hover{
 #certificados{
     background-color: var(--soft-negro);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 #certificados h3{
     color: var(--fucsia);
+    display: inline-block;
+    margin: 0 auto;
 }
 
 /* SECCIÓN CONTACTO */
