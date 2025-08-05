@@ -10,8 +10,11 @@ Este es un trabajo práctico evaluativo.
 <li>Tiene que tener etiquetas de maquetación.</li>
 <li>Tiene que ser responsive.</li>
 </ul>
-<h2>Enfoque</h2>
-Mobile first.
+<h2>Enfoques</h2>
+<ul>
+<li>Mobile first.</li>
+<li>HTML y CSS puro.</li>
+</ul>
 <h2>Descubrimientos</h2>
 <ul>
 <li>Para hacer que el menú despegable se cierre al presionar un link, es necesario usar JavaScript para que desmarque el checkbox.</li>
