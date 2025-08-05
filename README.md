@@ -13,7 +13,6 @@ Este es un trabajo práctico evaluativo.
 <h2>Enfoques</h2>
 <ul>
 <li>Mobile first.</li>
-<li>HTML y CSS puro.</li>
 </ul>
 <h2>Descubrimientos</h2>
 <ul>
