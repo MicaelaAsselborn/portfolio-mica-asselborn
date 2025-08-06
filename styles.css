@@ -5,13 +5,14 @@
     /* outline: 2px solid red; */
     font-family: "Delius Swash Caps" ,"Roboto flex", "Poiret One", Mulish, serif;
     scroll-behavior: smooth;
+    scroll-padding-top: var(--altura-header);
 }
 :root{
     --altura-header: 80px;
     --negro: #181818;
     --soft-negro: #272727;
     --soft-rosa: pink;
-    --rosa: rgb(255, 159, 175);
+    --rosa: #ff9faf;
     --fucsia: rgb(255, 98, 124);
     --rosa-chillon: rgb(255, 55, 88);
     --blanco: rgb(255, 244, 250);
@@ -20,13 +21,8 @@ body{
     background-color: var(--soft-negro);
     color: var(--blanco);
 }
-p{
-    font-size: 1.2em;
-    font-family: "Edu NSW ACT Hand Pre";
-}
 header{
     min-height: var(--altura-header);
-    background-color: var(--negro);
     color: var(--soft-rosa);
     display: flex;
     justify-content: space-between;
@@ -43,9 +39,6 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-h1{
-    font-size: 1.7em;
-}
 section{
     min-height: 100dvh;
     padding: 10%;
@@ -58,6 +51,94 @@ section:not(:first-of-type){
         padding: 15%;
     }
 }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--fucsia);
+}
+a:hover{
+    color: var(--rosa);
+}
+
+/* TEXTOS */
+
+h1{
+    font-size: 1.7em;
+}
+h2{
+    font-size: 3.5em;
+}
+h3{
+    font-size: 2.5em;
+}
+h3.underline{
+    display: inline-block;
+    margin: 0 auto;
+}
+h4{
+    font-size: 1.5em;
+}
+p{
+    font-size: 1.2em;
+    font-family: "Edu NSW ACT Hand Pre";
+}
+
+@media (min-width: 768px) {
+    h1{
+        font-size: 2.5em;
+    }
+    h3{
+    font-size: 4em;
+    }
+    p{
+        font-size: 2em;
+    }
+}
+@media (min-width: 1024px) {
+    .navbar{
+        font-size: 1.3em;
+    }
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 4em;
+    }
+    p{
+        font-size: 2em;
+    }
+}
+@media (min-width: 1440px) {
+    .navbar{
+        font-size: 1.8em;
+    }
+}
+@media (min-width: 2560px) {
+    h1{
+        font-size: 5em;
+    }
+    h2{
+        font-size: 10em;
+    }
+    h4{
+        font-size: 2em;
+    }
+    p{
+        font-size: 3.5em;
+    }
+    .navbar{
+        font-size: 3em;
+    }
+}
+
+/* COLOR FONDOS */
+
+header, .navbar, #sobre-mi, #proyectos, #contacto, footer{
+    background-color: var(--negro);
+}
+
 /* MENU HAMBURGUESA */
 
 .menu-hamburguesa, .icono-hamburguesa .icono-cerrar{
@@ -73,7 +154,6 @@ section:not(:first-of-type){
     display: inline;
 }
 .navbar{
-    background-color: var(--negro);
     width: 100%;
     position: fixed;
     top: var(--altura-header);
@@ -95,9 +175,6 @@ section:not(:first-of-type){
         gap: 0.8em;
         height: auto;
     }
-    h1{
-        font-size: 2.5em;
-    }
     .icono-hamburguesa{
         display: none;
     }
@@ -108,7 +185,7 @@ section:not(:first-of-type){
         font-size: 1.5rem;
         height: var(--altura-header);
         background-color: transparent;
-        gap: 1em;
+        gap: 0.9em;
         height: auto;
     }
 }
@@ -120,22 +197,16 @@ section:not(:first-of-type){
         padding: 20%;
     }
     .navbar{
-        font-size: 1.3em;
-        gap: 0.6em;
+        gap: 0.4em;
     }
 }
 @media (min-width: 1440px) {
     .navbar{
-        font-size: 1.8em;
         gap: 0.8em;
     }
 }
 @media (min-width: 2560px){
-    h1{
-        font-size: 5em;
-    }
     .navbar{
-        font-size: 3em;
         gap: 1em;
     }
     header{
@@ -143,18 +214,6 @@ section:not(:first-of-type){
     }
 }
 
-/* FIN MENU HAMBURGUESA */
-
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: var(--fucsia);
-}
-a:hover{
-    color: var(--rosa);
-}
 /* ANIMACIÓN UNDERLINE */
 
 .underline, .blinking{
@@ -175,8 +234,6 @@ a:hover{
 .underline:hover::after{
     transform: scaleX(1);
 }
-
-/* FIN ANIMACIÓN UNDERLINE */
 
 /* ANIMACIÓN BLINKING */
 .blinking{
@@ -214,39 +271,20 @@ text-align: center;
 }
 h2{
     color: var(--rosa-chillon);
-    font-size: 3.5em;
 }
 .texto-secundario{
     color: var(--fucsia);
     font-size: 2.5em;
-}
-@media (min-width: 768px){
-    p{
-        font-size: 2em;
-    }
 }
 @media (min-width: 1024px){
     .hero{
         align-items: flex-start;
         text-align: justify;
     }
-    h2{
-        font-size: 4em;
-    }
-    .texto-secundario
-    p{
-        font-size: 3em;
-    }
 }
 @media (min-width: 2560px){
     .hero{
         align-items: flex-start;
-    }
-    p{
-        font-size: 3.5em;
-    }
-    h2{
-        font-size: 10em;
     }
     .texto-secundario{
         font-size: 7em;
@@ -261,12 +299,10 @@ h2{
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     text-align: center;
-    background-color: var(--negro);
+    gap: 50px;
 }
 h3{
-    font-size: 2.5em;
     color: var(--rosa-chillon);
 }
 .sobre-mi-visual{
@@ -284,16 +320,13 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-size: 0.9em;
+    font-size: 90%;
 }
 @media (min-width: 768px){
     .sobre-mi-visual{
         display: flex;
         flex-direction: column;
         gap: 50px;
-    }
-    h3{
-    font-size: 4em;
     }
     .sobre-mi-texto{
         font-size: 0.8em;
@@ -397,31 +430,72 @@ h3{
 
 /* HABILIDADES */
 
-#lenguajes{
+#habilidades{
     background-color: var(--soft-negro);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#lenguajes h3{
+#habilidades h3{
     color: var(--fucsia);
-    display: inline-block;
-    margin: 0 auto;
 }
 .contenedor-lenguajes{
     display: flex;
     font-size: 5em;
     justify-content: space-evenly;
     margin-top: 1em;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .contenedor-lenguajes i{
     color: var(--rosa);
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
 }
-.contenedor-lenguajes i:hover{
+i:hover{
     transform: scale(1.5);
+    position: relative;
+    .tooltip{
+        display: block;
+    }
 }
+.tooltip{
+    display: none;
+    font-size: 0.2em;
+    position: absolute;
+    background-color: var(--negro);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px black;
+    top:6em;
+    border: 2px solid var(--fucsia);
+    z-index: 1;
+    animation: bounce 3s ease infinite;
+}
+.tooltip::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    margin-left: -50%;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent var(--fucsia) transparent;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10%)
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
 @media(min-width:768px){
     .contenedor-lenguajes{
         justify-content: center;
@@ -447,7 +521,6 @@ h3{
     height: auto;
 }
 h4{
-    font-size: 1.5em;
     width: 100%;
     padding: 8px 0;
     background-color: var(--soft-negro);
@@ -474,10 +547,6 @@ h4:hover{
     width: 100%;
     height: 200px;
     flex-shrink: 0;
-}
-.flecha{
-    font-size: 3em;
-    padding-bottom: 0.5em;
 }
 .espacio{
     display: inline-block;
@@ -506,7 +575,7 @@ h4:hover{
         z-index: 1;
         box-shadow: 0 0 10px white;
     }
-    .flechas-container{
+    #proyectos p{
         display: none;
     }
 }
@@ -559,7 +628,6 @@ h4:hover{
         height: 300px;
     }
     h4{
-        font-size: 2em;
         padding: 20px;
     }
 }
@@ -567,7 +635,6 @@ h4:hover{
 /* SECCIÓN CERTIFICADOS */
 
 #certificados{
-    background-color: var(--soft-negro);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -576,14 +643,11 @@ h4:hover{
 }
 #certificados h3{
     color: var(--fucsia);
-    display: inline-block;
-    margin: 0 auto;
 }
 
 /* SECCIÓN CONTACTO */
 
 #contacto{
-    background-color: var(--negro);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -595,9 +659,8 @@ h4:hover{
     font-size: 2.5em;
     transition: all 0.3s ease;
     color: var(--rosa);
-}
-.contenedor-redes i:hover{
-    transform: scale(1.5);
+    display: flex;
+    justify-content: center;
 }
 .contenedor-redes{
     display: flex;
@@ -624,7 +687,6 @@ h4:hover{
 footer{
     text-align: center;
     padding: 1em 2em;
-    background-color: var(--negro);
     font-size: 0.8em;
     border-top: 1.5px solid pink;
 }

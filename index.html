@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de Micaela Asselborn</title>
+
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -43,7 +44,7 @@
         <ul class="navbar">
           <li class="underline"><a href="#inicio">Inicio</a></li>
           <li class="underline"><a href="#sobre-mi">Sobre mi</a></li>
-          <li class="underline"><a href="#lenguajes">Lenguajes</a></li>
+          <li class="underline"><a href="#habilidades">Habilidades</a></li>
           <li class="underline"><a href="#proyectos">Proyectos</a></li>
           <li class="underline"><a href="#certificados">Certificados</a></li>
           <li class="underline"><a href="#contacto">Contacto</a></li>
@@ -103,12 +104,17 @@
           </p>
         </div>
       </section>
-      <section id="lenguajes">
-        <h3 class="underline">Lenguajes</h3>
+      <section id="habilidades">
+        <h3 class="underline">Habilidades, lenguajes y herramientas</h3>
         <div class="contenedor-lenguajes">
-          <i class="fa-brands fa-html5" title="HTML5"></i>
-          <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-          <i class="fa-brands fa-square-js" title="JavaScript"></i>
+          <i class="fa-brands fa-html5">
+            <span class="tooltip">HTML5</span>
+          </i>
+          <i class="fa-brands fa-css3-alt"><span class="tooltip">CSS3</span></i>
+          <i class="fa-brands fa-square-js"
+            ><span class="tooltip">JavaScript</span></i
+          >
+          <i class="fa-brands fa-github"><span class="tooltip">GitHub</span></i>
         </div>
       </section>
       <section id="proyectos">
@@ -156,18 +162,7 @@
             />
           </div>
         </div>
-        <div class="flechas-container">
-          <i
-            class="fa-solid fa-arrow-left flecha"
-            style="color: rgb(255, 98, 124)"
-          ></i>
-          <span class="espacio"></span>
-          <i
-            class="fa-solid fa-arrow-right flecha"
-            style="color: rgb(255, 98, 124)"
-          ></i>
-          <p>Desliza hacia la derecha o izquierda para ver más</p>
-        </div>
+        <p>Desliza hacia la derecha o izquierda para ver más</p>
       </section>
       <section id="certificados">
         <h3 class="underline">Certificados</h3>
@@ -187,27 +182,31 @@
           ></i>
         </p>
         <div class="contenedor-redes">
-          <a
-            href="https://github.com/MicaelaAsselborn"
-            title="¡Chequea mis repositorios!"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/mica_asselborn/?hl=es-la"
-            title="¡Encuentrame en Instagram!"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/mica.asselborn"
-            title="¡Encuentrame en Facebook!"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="mailto:asselborn96@gmail.com" title="¡Mándame un email!"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
-          <a href="https://wa.me/5492996015824" title="¡Envíame un mensaje!"
-            ><i class="fa-brands fa-whatsapp"></i
-          ></a>
+          <a href="https://github.com/MicaelaAsselborn"
+            ><i class="fa-brands fa-github"
+              ><span class="tooltip">¡Chequea mis repositorios!</span>
+            </i></a
+          >
+          <a href="https://www.instagram.com/mica_asselborn/?hl=es-la"
+            ><i class="fa-brands fa-instagram">
+              <span class="tooltip">¡Encuentrame en Instagram!</span></i
+            ></a
+          >
+          <a href="https://www.facebook.com/mica.asselborn"
+            ><i class="fa-brands fa-facebook"
+              ><span class="tooltip">¡Encuentrame en Facebook!</span></i
+            ></a
+          >
+          <a href="mailto:asselborn96@gmail.com"
+            ><i class="fa-solid fa-envelope"
+              ><span class="tooltip">¡Mándame un email!</span></i
+            ></a
+          >
+          <a href="https://wa.me/5492996015824"
+            ><i class="fa-brands fa-whatsapp"
+              ><span class="tooltip">¡Envíame un mensaje!</span></i
+            ></a
+          >
         </div>
       </section>
     </main>
