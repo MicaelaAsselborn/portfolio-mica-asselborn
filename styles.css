@@ -135,7 +135,7 @@ p{
     p{
         font-size: 3.5em;
     }
-    .navbar{
+    ul.navbar{
         font-size: 3em;
     }
 }
@@ -555,10 +555,6 @@ h4:hover{
     height: 200px;
     flex-shrink: 0;
 }
-.espacio{
-    display: inline-block;
-    width: 2em;
-}
 @media (min-width:768px){
     .wrapper{
     width: 100%;
@@ -646,7 +642,11 @@ h4:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    img{
+        max-width: 1024px;
+    }
 }
 #certificados h3{
     color: var(--fucsia);
