@@ -33,6 +33,9 @@ header{
     z-index: 3;
     width: 100%;
     top: 0;
+    .h1{
+        color: var(--soft-rosa);
+    }
 }
 nav{
     display: flex;
