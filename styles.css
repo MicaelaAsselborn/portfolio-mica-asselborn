@@ -54,12 +54,16 @@ section:not(:first-of-type){
 li{
     list-style: none;
 }
+li:hover{
+    animation: bounce 2s ease-in-out infinite;
+    color: white;
+}
 a{
     text-decoration: none;
     color: var(--fucsia);
 }
 a:hover{
-    color: var(--rosa);
+    color: var(--soft-rosa);
 }
 
 /* TEXTOS */
@@ -469,7 +473,7 @@ i:hover{
     padding: 15px;
     border-radius: 8px;
     box-shadow: 5px 5px 5px black;
-    top:6em;
+    top:5em;
     border: 2px solid var(--fucsia);
     z-index: 1;
     animation: bounce 3s ease infinite;
@@ -478,7 +482,7 @@ i:hover{
     content: "";
     position: absolute;
     bottom: 100%;
-    margin-left: -50%;
+    margin-left: -60%;
     border-width: 15px;
     border-style: solid;
     border-color: transparent transparent var(--fucsia) transparent;
@@ -489,7 +493,7 @@ i:hover{
         transform: translateY(0);
     }
     50%{
-        transform: translateY(10%)
+        transform: translateY(15%)
     }
     100%{
         transform: translateY(0%);
@@ -667,6 +671,9 @@ h4:hover{
     justify-content: center;
     gap: 2%;
     margin-top: 15%;
+}
+.bounce{
+    animation: bounce 3s ease infinite;
 }
 @media(min-width:768px){
     .contenedor-redes i{
