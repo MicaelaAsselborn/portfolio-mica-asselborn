@@ -645,6 +645,7 @@ h4:hover{
     align-items: center;
     gap: 20px;
     img{
+        width: 100%;
         max-width: 1024px;
     }
 }
