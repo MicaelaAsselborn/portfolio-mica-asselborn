@@ -23,7 +23,6 @@ body{
 }
 header{
     min-height: var(--altura-header);
-    color: var(--soft-rosa);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +34,9 @@ header{
     top: 0;
     .h1{
         color: var(--soft-rosa);
+    }
+    i{
+        padding-right: 8px;
     }
 }
 nav{
@@ -58,7 +60,6 @@ li{
     list-style: none;
 }
 li:hover{
-    animation: bounce 2s ease-in-out infinite;
     color: white;
 }
 a{
@@ -461,7 +462,7 @@ h3{
     display: flex;
     justify-content: center;
 }
-i:hover{
+main i:hover{
     transform: scale(1.5);
     position: relative;
     .tooltip{
@@ -486,7 +487,7 @@ i:hover{
     position: absolute;
     bottom: 100%;
     margin-left: -60%;
-    border-width: 15px;
+    border-width: 12px;
     border-style: solid;
     border-color: transparent transparent var(--fucsia) transparent;
 }
@@ -651,6 +652,11 @@ h4:hover{
 }
 #certificados h3{
     color: var(--fucsia);
+}
+@media screen and (min-width: 2560px) {
+    #certificados img{
+        max-width: 2000px;
+    }
 }
 
 /* SECCIÓN CONTACTO */
